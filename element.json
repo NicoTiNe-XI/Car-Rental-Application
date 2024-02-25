@@ -1,0 +1,439 @@
+{
+    "testimonials": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "position": "CEO, ABC Company",
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=truck&format=json"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "position": "Founder, XYZ Corporation",
+            "message": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=car&format=json"
+        },
+        {
+            "id": 3,
+            "name": "Alice Johnson",
+            "position": "Director of Marketing, PQR Inc.",
+            "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=keyboard&format=json"
+        },
+        {
+            "id": 4,
+            "name": "David Brown",
+            "position": "VP of Sales, LMN Corporation",
+            "message": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=strawberry&format=json"
+        },
+        {
+            "id": 5,
+            "name": "Emily Taylor",
+            "position": "Product Manager, UVW Inc.",
+            "message": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=watermelon&format=json"
+        },
+        {
+            "id": 6,
+            "name": "Michael Clark",
+            "position": "CTO, RST Corporation",
+            "message": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=camera&format=json"
+        },
+        {
+            "id": 7,
+            "name": "Sarah Martinez",
+            "position": "Marketing Manager, UVW Inc.",
+            "message": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=cat&format=json"
+        },
+        {
+            "id": 8,
+            "name": "William Johnson",
+            "position": "Operations Manager, PQR Inc.",
+            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=dog&format=json"
+        },
+        {
+            "id": 9,
+            "name": "Emma White",
+            "position": "HR Manager, LMN Corporation",
+            "message": "Et harum quidem rerum facilis est et expedita distinctio.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=child&format=json"
+        },
+        {
+            "id": 10,
+            "name": "Daniel Anderson",
+            "position": "Software Engineer, XYZ Corporation",
+            "message": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=man&format=json"
+        },
+        {
+            "id": 11,
+            "name": "Olivia Garcia",
+            "position": "Customer Support Specialist, ABC Company",
+            "message": "Omnis voluptas assumenda est, omnis dolor repellendus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=woman&format=json"
+        },
+        {
+            "id": 12,
+            "name": "James Wilson",
+            "position": "Sales Representative, UVW Inc.",
+            "message": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=flower&format=json"
+        },
+        {
+            "id": 13,
+            "name": "Ava Brown",
+            "position": "Marketing Assistant, XYZ Corporation",
+            "message": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=user&format=json"
+        },
+        {
+            "id": 14,
+            "name": "Noah Wilson",
+            "position": "QA Tester, RST Corporation",
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=building&format=json"
+        },
+        {
+            "id": 15,
+            "name": "Sophia Lee",
+            "position": "UI/UX Designer, PQR Inc.",
+            "message": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=art&format=json"
+        },
+        {
+            "id": 16,
+            "name": "Logan Garcia",
+            "position": "Content Writer, ABC Company",
+            "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=rabbit&format=json"
+        },
+        {
+            "id": 17,
+            "name": "Isabella Taylor",
+            "position": "Data Analyst, UVW Inc.",
+            "message": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=sketch&format=json"
+        },
+        {
+            "id": 18,
+            "name": "Benjamin Rodriguez",
+            "position": "Finance Manager, XYZ Corporation",
+            "message": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=elephant&format=json"
+        },
+        {
+            "id": 19,
+            "name": "Mia Hernandez",
+            "position": "Operations Assistant, PQR Inc.",
+            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=giraffe&format=json"
+        },
+        {
+            "id": 20,
+            "name": "Ethan Martinez",
+            "position": "Sales Associate, LMN Corporation",
+            "message": "Et harum quidem rerum facilis est et expedita distinctio.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=lion&format=json"
+        },
+        {
+            "id": 21,
+            "name": "Madison Lopez",
+            "position": "HR Assistant, RST Corporation",
+            "message": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=puma&format=json"
+        },
+        {
+            "id": 22,
+            "name": "Liam Perez",
+            "position": "Software Developer, ABC Company",
+            "message": "Omnis voluptas assumenda est, omnis dolor repellendus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=wolf&format=json"
+        },
+        {
+            "id": 23,
+            "name": "Charlotte Turner",
+            "position": "Customer Service Representative, UVW Inc.",
+            "message": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=wolf&format=json"
+        },
+        {
+            "id": 24,
+            "name": "Alexander Scott",
+            "position": "Marketing Coordinator, XYZ Corporation",
+            "message": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=mountain&format=json"
+        },
+        {
+            "id": 25,
+            "name": "Grace Young",
+            "position": "Product Designer, RST Corporation",
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=pyramid&format=json"
+        },
+        {
+            "id": 26,
+            "name": "Lucas King",
+            "position": "Content Creator, PQR Inc.",
+            "message": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=sea&format=json"
+        },
+        {
+            "id": 27,
+            "name": "Chloe Roberts",
+            "position": "Data Scientist, ABC Company",
+            "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=ocean&format=json"
+        },
+        {
+            "id": 28,
+            "name": "Ryan Hill",
+            "position": "Financial Analyst, UVW Inc.",
+            "message": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=ship&format=json"
+        },
+        {
+            "id": 29,
+            "name": "Nora Foster",
+            "position": "Operations Analyst, XYZ Corporation",
+            "message": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=aircraft&format=json"
+        },
+        {
+            "id": 30,
+            "name": "Leo Reed",
+            "position": "Sales Coordinator, PQR Inc.",
+            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=airplane&format=json"
+        },
+        {
+            "id": 31,
+            "name": "Hannah Cooper",
+            "position": "HR Specialist, RST Corporation",
+            "message": "Et harum quidem rerum facilis est et expedita distinctio.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=sky&format=json"
+        },
+        {
+            "id": 32,
+            "name": "Owen Murphy",
+            "position": "Software Tester, ABC Company",
+            "message": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=water&format=json"
+        },
+        {
+            "id": 33,
+            "name": "Ella Richardson",
+            "position": "Customer Support Specialist, UVW Inc.",
+            "message": "Omnis voluptas assumenda est, omnis dolor repellendus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&waterdrop=aircraft&format=json"
+        },
+        {
+            "id": 34,
+            "name": "Jack Cooper",
+            "position": "Marketing Analyst, XYZ Corporation",
+            "message": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=purple&format=json"
+        },
+        {
+            "id": 35,
+            "name": "Avery Carter",
+            "position": "Product Manager, RST Corporation",
+            "message": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=pink&format=json"
+        },
+        {
+            "id": 36,
+            "name": "John Doe",
+            "position": "CEO, XYZ Corporation",
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=black&format=json"
+        },
+        {
+            "id": 37,
+            "name": "Jane Smith",
+            "position": "CTO, ABC Company",
+            "message": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=white&format=json"
+        },
+        {
+            "id": 38,
+            "name": "Michael Johnson",
+            "position": "COO, PQR Inc.",
+            "message": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=orange&format=json"
+        },
+        {
+            "id": 39,
+            "name": "Emma Garcia",
+            "position": "CFO, UVW Inc.",
+            "message": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=banana&format=json"
+        },
+        {
+            "id": 40,
+            "name": "James Brown",
+            "position": "Creative Director, LMN Corporation",
+            "message": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=apple&format=json"
+        },
+        {
+            "id": 41,
+            "name": "Olivia Martinez",
+            "position": "Lead Developer, RST Corporation",
+            "message": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=mac&format=json"
+        },
+        {
+            "id": 42,
+            "name": "William Wilson",
+            "position": "QA Engineer, PQR Inc.",
+            "message": "Et harum quidem rerum facilis est et expedita distinctio.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=pc&format=json"
+        },
+        {
+            "id": 43,
+            "name": "Ava Taylor",
+            "position": "Graphic Designer, ABC Company",
+            "message": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=mango&format=json"
+        },
+        {
+            "id": 44,
+            "name": "Noah Anderson",
+            "position": "Analyst, UVW Inc.",
+            "message": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=playstation&format=json"
+        },
+        {
+            "id": 45,
+            "name": "Sophia Thomas",
+            "position": "HR Manager, XYZ Corporation",
+            "message": "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+            "avatar": "https://random.imagecdn.app/v1/image?width=50&height=50&category=mouse&format=json"
+        }
+    ],
+    "leadership": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "position": "CEO",
+            "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "position": "CTO",
+            "avatar": "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+            "id": 3,
+            "name": "Alice Johnson",
+            "position": "CFO",
+            "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+        }
+    ],
+    "designers": [
+        {
+            "id": 4,
+            "name": "Emily Brown",
+            "position": "Lead Designer",
+            "avatar": "https://plus.unsplash.com/premium_photo-1664453547090-0e8a92a6ed4c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+            "id": 5,
+            "name": "Michael Clark",
+            "position": "UI/UX Designer",
+            "avatar": "https://plus.unsplash.com/premium_photo-1664203067979-47448934fd97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmFjZXxlbnwwfHwwfHx8MA%3D%3D"
+        },
+        {
+            "id": 6,
+            "name": "Sarah Martinez",
+            "position": "Graphic Designer",
+            "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        }
+    ],
+    "developers": [
+        {
+            "id": 7,
+            "name": "David Wilson",
+            "position": "Lead Developer",
+            "avatar": "https://plus.unsplash.com/premium_photo-1680020185326-45491267f8da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 8,
+            "name": "Daniel Anderson",
+            "position": "Frontend Developer",
+            "avatar": "https://images.unsplash.com/photo-1545996124-0501ebae84d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 9,
+            "name": "Emma White",
+            "position": "Backend Developer",
+            "avatar": "https://images.unsplash.com/photo-1571816119607-57e48af1caa9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        }
+    ],
+    "marketing": [
+        {
+            "id": 10,
+            "name": "William Johnson",
+            "position": "Marketing Director",
+            "avatar": "https://plus.unsplash.com/premium_photo-1677191563928-24aa5cc54159?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 11,
+            "name": "Olivia Garcia",
+            "position": "Social Media Manager",
+            "avatar": "https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 12,
+            "name": "Ryan Wilson",
+            "position": "Content Marketer",
+            "avatar": "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        }
+    ],
+    "products": [
+        {
+            "id": 16,
+            "name": "Daniel Brown",
+            "position": "Product Manager",
+            "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 17,
+            "name": "Natalie Cooper",
+            "position": "Product Designer",
+            "avatar": "https://images.unsplash.com/photo-1618835962148-cf177563c6c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 18,
+            "name": "Justin Reed",
+            "position": "Product Analyst",
+            "avatar": "https://images.unsplash.com/photo-1549351512-c5e12b11e283?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        }
+    ],
+    "hr": [
+        {
+            "id": 13,
+            "name": "Jessica Miller",
+            "position": "HR Manager",
+            "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 14,
+            "name": "Peter Wilson",
+            "position": "Recruitment Specialist",
+            "avatar": "https://plus.unsplash.com/premium_photo-1664536392896-cd1743f9c02c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        },
+        {
+            "id": 15,
+            "name": "Sophia Hall",
+            "position": "Employee Relations Officer",
+            "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGZhY2V8ZW58MHx8MHx8fDA%3D"
+        }
+    ]
+}
