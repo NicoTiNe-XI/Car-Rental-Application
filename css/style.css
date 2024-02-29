@@ -1,4 +1,6 @@
 /* Start of Variables */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --main-transition: 0.3s;
     --main-border-radius: 8px;
@@ -22,8 +24,6 @@ html {
     scrollbar-width: thin;
     scrollbar-color: var(--secondary-color) transparent;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -84,7 +84,6 @@ a.main-page {
     border-radius: var(--main-border-radius);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2.1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: var(--main-transition);
     display: flex;
     align-items: center;
@@ -113,6 +112,96 @@ section {
     flex-direction: column;
     flex-wrap: wrap;
     padding-bottom: 70px;
+}
+
+.zoomOut {
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(2);
+    transition: all 1s;
+}
+
+.zoomOut.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.zoomIn {
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(0);
+    transition: all 1s;
+}
+
+.zoomIn.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.rightFade {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+.rightFade.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.leftFade {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.leftFade.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.upFade {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.upFade.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.downFade {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 1s;
+}
+
+.downFade.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@keyframes zoomOutAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 1200px) {
@@ -157,103 +246,6 @@ section {
         text-align: center;
         font-size: 32px !important;
         margin-bottom: 40px;
-    }
-}
-
-
-@keyframes fadeDownAnimation {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, -100px, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fadeUpAnimation {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100px, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fadeRightAnimation {
-    0% {
-        opacity: 0;
-        transform: translate3d(-100px, 0, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes fadeLeftAnimation {
-    0% {
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes bigHeadingFadeRightAnimation {
-    0% {
-        opacity: 0;
-        transform: translate3d(-700px, 0, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes bigHeadingFadeLeftAnimation {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 150px, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@keyframes zoomOutAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-@keyframes zoomInAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(2);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
     }
 }
 
@@ -396,13 +388,13 @@ main .container {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     min-height: 40vh;
 }
 
 main .text {
     max-width: 50%;
     word-wrap: break-word;
-    animation: fadeUpAnimation 1s linear;
 }
 
 main .text h1 {
@@ -415,6 +407,7 @@ main .text h1 span {
 
 main .text p {
     color: gray;
+    max-width: 470px;
 }
 
 main .text .buttons {
@@ -442,7 +435,6 @@ main .text .buttons .secondary-color-button:hover {
 
 main .main-image {
     max-width: 50%;
-    animation: fadeDownAnimation 1s ease-in;
 }
 
 main .main-image img {
@@ -492,7 +484,6 @@ main .main-image img {
 /* Start of Booking */
 section.booking {
     padding-bottom: 150px;
-    animation: fadeRightAnimation 1s linear;
 }
 
 section.booking .container form {
@@ -528,23 +519,24 @@ section.booking .container form input {
     border: none;
     outline: none;
     font-weight: var(--main-font-weight);
-    color: gray;
     border-radius: var(--main-border-radius);
-    background: #d3d0d094;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2.1px);
+    background: #d3d0d094;
+
+}
+
+section.booking .container form select option:disabled {
+    color: gray;
+
 }
 
 .search {
     margin-top: 58px;
     padding: 10px 25px;
-    cursor: pointer !important;
-    font-weight: var(--main-font-weight) !important;
-    font-size: var(--main-font-size) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
-    backdrop-filter: blur(2.1px) !important;
+    cursor: pointer;
+    font-size: var(--main-font-size);
     border-radius: 0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
 .search {
@@ -595,10 +587,6 @@ section.booking form span {
 
 /* End of Booking */
 /* Start of Details */
-section.details .container {
-    animation: zoomInAnimation 1s ease-out;
-}
-
 section.details .container .box-container {
     display: flex;
     justify-content: space-between;
@@ -612,21 +600,14 @@ section.details .container .box-container .box {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    cursor: pointer;
-    transition: var(--main-transition);
     border-radius: var(--main-border-radius);
     background: #d3d0d094;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.1px);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 section.details .container .box-container .box .icon {
     padding-top: 20px;
-}
-
-.details .container .box-container .box:hover {
-    transform: translateY(-20px);
 }
 
 section.details .container .box-container .box span {
@@ -662,19 +643,11 @@ section.details .container .box-container .box p {
 
 /* End of Details */
 /* Start of vehicle Models */
-section.vehicle-models .container {
-    animation: zoomOutAnimation 1s ease-out;
-}
-
 section.vehicle-models .container .content {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-
-section.vehicle-models .container .content .left-side {
-    animation: fadeRightAnimation 1s ease-in-out;
 }
 
 section.vehicle-models .container .content .left-side,
@@ -706,20 +679,20 @@ section.vehicle-models .container .content .mid-side {
     max-width: 56%;
     width: 56%;
     transition: var(--main-transition);
-    animation: zoomOutAnimation 1s ease-in-out;
 }
 
 section.vehicle-models .container .content .mid-side img {
     width: 100%;
     height: 345px;
-    animation: fadeInAnimation 1s ease-in-out;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
 }
 
 section.vehicle-models .container .content .right-side {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    animation: fadeLeftAnimation 1s ease-in-out;
 }
 
 section.vehicle-models .container .content .right-side .vehicle-details {
@@ -738,7 +711,6 @@ section.vehicle-models .container .content .right-side h4 {
 
 section.vehicle-models .container .content .right-side h4 span {
     font-size: 30px;
-    font-weight: 900;
 }
 
 section.vehicle-models .container .content .right-side .row {
@@ -769,6 +741,7 @@ section.vehicle-models .container .content .right-side .reserve {
     border-radius: 0px;
     margin-top: 5px;
     font-size: 22px;
+    font-weight: 900;
 }
 
 @media (max-width: 470px) {
@@ -816,7 +789,6 @@ section.big-heading {
     background-color: var(--secondary-color);
     color: var(--white-color);
     text-align: center;
-    animation: bigHeadingFadeRightAnimation 1s ease-out;
 }
 
 section.big-heading h2 {
@@ -855,8 +827,7 @@ section.big-heading h6 span {
 /* Start of Big Heading */
 /* Start of Adv */
 section.adv {
-    padding-bottom: 30px;
-    animation: bigHeadingFadeLeftAnimation 1s ease-out;
+    padding: 50px 0;
 }
 
 section.adv .container {
@@ -884,7 +855,6 @@ section.adv-text .container {
 
 section.adv-text .container .left-side {
     padding-right: 91px;
-    animation: fadeRightAnimation 0.4s linear;
 }
 
 section.adv-text .container .left-side,
@@ -908,10 +878,6 @@ section.adv-text .container .left-side h2 {
 section.adv-text .container p {
     color: gray;
     line-height: 1.5;
-}
-
-section.adv-text .container .right-side {
-    animation: fadeLeftAnimation 0.4s linear;
 }
 
 section.adv-text .container .right-side .box {
@@ -965,10 +931,6 @@ section.adv-text .container .right-side .box p {
 
 /* End of Adv Text */
 /* Start of Testimonials */
-section.testimonials .title-text {
-    animation: fadeDownAnimation 0.4s linear;
-}
-
 section.testimonials .testimonials-heads {
     display: flex;
     justify-content: space-between;
@@ -980,20 +942,11 @@ section.testimonials .testimonials-heads img {
     border-radius: 50%;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2.1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 section.testimonials .testimonials-heads .left-side,
 section.testimonials .testimonials-heads .right-side {
     max-width: 50%;
-}
-
-section.testimonials .testimonials-heads .left-side {
-    animation: fadeRightAnimation 0.4s linear;
-}
-
-section.testimonials .testimonials-heads .right-side {
-    animation: fadeLeftAnimation 0.4s linear;
 }
 
 section.testimonials .testimonials-heads .text {
@@ -1085,7 +1038,6 @@ section.faq .title-text {
 
 section.faq .container {
     width: 751px;
-    animation: fadeDownAnimation 1s ease-in-out;
 }
 
 section.faq .title-text p {
@@ -1098,7 +1050,6 @@ section.faq .range-rover {
     position: absolute;
     right: 50px;
     top: 80px;
-    animation: fadeLeftAnimation 1s ease-in-out;
 }
 
 section.faq .question {
@@ -1115,7 +1066,6 @@ section.faq .question {
     cursor: pointer;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2.1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: var(--main-transition);
 }
 
@@ -1153,14 +1103,6 @@ section.download-our-app .container .left-side,
 section.download-our-app .container .right-side {
     width: 50%;
     max-width: 50%;
-}
-
-section.download-our-app .container .left-side {
-    animation: fadeRightAnimation 1s ease-in-out;
-}
-
-section.download-our-app .container .right-side {
-    animation: fadeLeftAnimation 1s ease-in-out;
 }
 
 section.download-our-app .container .left-side h2 {
@@ -1237,7 +1179,6 @@ footer .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: zoomInAnimation 1s ease-in-out;
 }
 
 footer .container .content {
@@ -1317,8 +1258,8 @@ footer .container .content.subscribe .submit-email {
     font-size: var(--main-font-size);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2.1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: var(--main-transition);
+    border: none;
 }
 
 footer .container .content.subscribe .submit-email {
@@ -1410,18 +1351,11 @@ footer .container .content.subscribe .submit-email:hover {
     white-space: nowrap;
 }
 
-/* @media (max-width: 470px) {
-    .back-to-top {
-        right: 20px;
-    }
-} */
-
 /* Back to top */
 
 /* About HTML Page */
 .about-us-main .container {
     padding: 100px 0 70px;
-    animation: zoomOutAnimation 1s ease-in-out;
 }
 
 .about-us-main .container .title-text {
@@ -1539,7 +1473,6 @@ footer .container .content.subscribe .submit-email:hover {
 
 .about-us-text {
     padding-bottom: 50px;
-    animation: fadeLeftAnimation 1s linear;
 }
 
 .about-us-text p {
@@ -1612,14 +1545,6 @@ footer .container .content.subscribe .submit-email:hover {
 /* Testimonials HTML Page */
 .testimonials-main .container {
     padding: 150px 0 0;
-    animation: fadeLeftAnimation 1s ease-in-out;
-}
-
-.testimonials-main .container .title-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 .testimonials-main .container .title-text h1 {
@@ -1648,7 +1573,16 @@ footer .container .content.subscribe .submit-email:hover {
 }
 
 .testimonials-messages .container .testimonials-user {
-    animation: zoomOutAnimation 1s ease-in-out;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+
+.testimonials-messages .container .testimonials-user.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
 }
 
 .testimonials-messages .container .testimonials-user-message {
@@ -1802,7 +1736,6 @@ footer .container .content.subscribe .submit-email:hover {
     text-align: center;
     font-weight: normal;
     color: var(--main-color);
-    animation: zoomOutAnimation 1s ease-in-out;
 }
 
 .contact-us-footer h2 span {
@@ -1812,7 +1745,6 @@ footer .container .content.subscribe .submit-email:hover {
 .contact-us-footer .container {
     display: flex;
     justify-content: space-between;
-    animation: zoomOutAnimation 1s ease-in-out;
 }
 
 .contact-us-footer .container .hq p {
@@ -1852,7 +1784,6 @@ footer .container .content.subscribe .submit-email:hover {
     max-width: 30%;
     padding: 40px 20px;
     height: 500px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2), -12px -3px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2.1px);
     position: relative;
 }
@@ -1904,7 +1835,6 @@ footer .container .content.subscribe .submit-email:hover {
 .sign-in-main .container .sign-in-image img {
     height: 500px;
     width: 100%;
-    box-shadow: 20px 0px 30px rgba(0, 0, 0, 0.2), -6px 4px 30px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2.1px);
 
 }
@@ -1926,7 +1856,6 @@ footer .container .content.subscribe .submit-email:hover {
     }
 
     .sign-in-main .container .sign-in-image img {
-        box-shadow: 20px -20px 30px rgba(0, 0, 0, 0.2), -20px 20px 30px rgba(0, 0, 0, 0.2);
         height: auto;
     }
 
@@ -2024,6 +1953,25 @@ footer .container .content.subscribe .submit-email:hover {
 
 .register-form .container form div.not-valid input {
     border-color: #ff3860;
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .register-form .container form div .error {
@@ -2039,8 +1987,7 @@ footer .container .content.subscribe .submit-email:hover {
 
 .register-form .container form .gender-radio {
     display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
+    gap: 40px;
 }
 
 .register-form .container form .gender-radio div {

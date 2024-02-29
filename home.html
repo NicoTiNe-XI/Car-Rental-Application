@@ -24,7 +24,7 @@
         <div class="container">
             <div class="logo" id="logo">
                 <div class="logo image">
-                    <img src="/Images/1f697.png" alt="Rent Car Logo">
+                    <img src="/Images/1f697.png" alt="Rent Car Logo" loading="eager">
                 </div>
                 <div class="logo-text"><span class="bold-text">CAR</span><span class="small-text">Rental</span>
                 </div>
@@ -64,7 +64,7 @@
     <!-- Start of Main -->
     <main>
         <div class="container">
-            <div class="text">
+            <div class="text leftFade">
                 <h3>Plan your trip now</h3>
                 <h1>Save <span>Big</span> with our car rental</h1>
                 <p>Rent the car of your dreams. Unbeatable prices. unlimited miles.
@@ -81,14 +81,14 @@
                         </span></a>
                 </div>
             </div>
-            <div class="main-image">
-                <img src="/Images/landing.jpg" alt="Red VW Car">
+            <div class="main-image upFade">
+                <img src="/Images/landing.jpg" alt="Red VW Car" loading="eager">
             </div>
         </div>
     </main>
     <!-- End of Main -->
     <!-- Start of Booking -->
-    <section class="booking">
+    <section class="booking zoomIn" id="book">
         <div class="container">
             <div class="title-text">
                 <h3>Book A Car</h3>
@@ -98,8 +98,8 @@
                     <label for="cars"><span class="material-symbols-outlined">
                             directions_car
                         </span> Select Your Car Type <span>*</span></label>
-                    <select name="cars" id="cars">
-                        <option value="none" disabled selected>Select Your Car Type</option>
+                    <select name="cars" id="cars" defaultValue="" required>
+                        <option value="" disabled selected>Select Your Car Type</option>
                         <option value="audi">Audi A1 S-Line</option>
                         <option value="vw-golf">VW Golf 6</option>
                         <option value="toyota"> Toyota Camry</option>
@@ -112,8 +112,8 @@
                     <label for="pick-up"><span class="material-symbols-outlined">
                             location_on
                         </span> Pick-up <span>*</span></label>
-                    <select name="pick-up" id="pick-up">
-                        <option value="none" disabled selected>Select Your Pick-up Location</option>
+                    <select name="pick-up" id="pick-up" defaultValue="" required>
+                        <option value="" disabled selected>Select Your Pick-up Location</option>
                         <option value="mercedes">Cairo</option>
                         <option value="audi">New Cairo</option>
                         <option value="toyota">The 5th Settlement</option>
@@ -121,12 +121,12 @@
                         <option value="bmw">Ma'adi</option>
                     </select>
                 </div>
-                <div class="drop-off-location">
+                <div class="drop-of-location">
                     <label for="drop-of"><span class="material-symbols-outlined">
                             location_on
                         </span> Drop-of <span>*</span></label>
-                    <select name="drop-of" id="drop-of">
-                        <option value="none" disabled selected>Select Your Drop-of Location</option>
+                    <select name="drop-of" id="drop-of" defaultValue="" required>
+                        <option value="" disabled selected>Select Your Drop-of Location</option>
                         <option value="mercedes">Cairo</option>
                         <option value="audi">New Cairo</option>
                         <option value="toyota">The 5th Settlement</option>
@@ -138,13 +138,13 @@
                     <label for="pick-up-date"><span class="material-symbols-outlined">
                             calendar_month
                         </span> Pick-up Date <span>*</span></label>
-                    <input type="date" name="pick-up-date" id="pick-up-date">
+                    <input type="date" name="pick-up-date" id="pick-up-date" required>
                 </div>
-                <div class="drop-off-day">
+                <div class="drop-of-day">
                     <label for="drop-of-date"><span class="material-symbols-outlined">
                             calendar_month
                         </span> Drop-of Date <span>*</span></label>
-                    <input type="date" name="drop-of-date" id="drop-of-date">
+                    <input type="date" name="drop-of-date" id="drop-of-date" required>
                 </div>
                 <input type="submit" value="Search" class="search">
             </form>
@@ -152,7 +152,7 @@
     </section>
     <!-- End of Booking -->
     <!-- Start of Details -->
-    <section class="details" id="book">
+    <section class="details rightFade">
         <div class="container">
             <div class="title-text">
                 <h3 class="section-h3">Plan your trip now</h3>
@@ -195,13 +195,13 @@
     <!-- Start of Vehicle Models -->
     <section class="vehicle-models">
         <div class="container">
-            <div class="title-text">
+            <div class="title-text zoomOut">
                 <h3 class="section-h3">Plan your trip now</h3>
                 <h2>Quick & Easy Car Rental</h2>
                 <p>Choose from a variety of our amazing vehicles to rent for your next adventure or business trip</p>
             </div>
             <div class="content">
-                <div class="left-side">
+                <div class="left-side rightFade">
                     <button class="active">Audi A1 S-Line</button>
                     <button>VW Golf 6</button>
                     <button>Toyota Camry</button>
@@ -209,10 +209,10 @@
                     <button>Mercedes-Benz GLK</button>
                     <button>VW Passat CC</button>
                 </div>
-                <div class="mid-side">
-                    <img id="current-model" src="/Images/Audi A1 S-line.jpg" alt="Audi A1 S-line">
+                <div class="mid-side upFade">
+                    <img id="current-model" src="/Images/Audi A1 S-line.jpg" alt="Audi A1 S-line" loading="lazy">
                 </div>
-                <div class="right-side">
+                <div class="right-side leftFade">
                     <div class="vehicle-details">
                         <h4><span class="price">$45 /</span> rent per day</h4>
                         <div class="row">
@@ -251,29 +251,30 @@
                             <p class="fuel">Diesel</p>
                         </div>
                     </div>
-                    <a href="" class="main-page main-color-button reserve">Reserve Now</a>
+                    <a href="https://en.wikipedia.org/wiki/Reverse" target="_blank"
+                        class="main-page main-color-button reserve">Reserve Now</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- End of vehicle Models -->
     <!-- Start of Big Heading -->
-    <section class="big-heading">
+    <section class="big-heading leftFade">
         <h2>Save big with our cheap car rental!</h2>
         <h6>Top Airport. Local Suppliers. <span>24/7</span> Support.</h6>
     </section>
     <!-- End of Big Heading -->
     <!-- Start of Adv -->
-    <section class="adv">
+    <section class="adv rightFade">
         <div class="container">
-            <img src="/Images/Adv.jpg" alt="3 Cars Parked On The Same Line With White BackGround">
+            <img src="/Images/Adv.png" alt="3 Cars Parked On The Same Line With White BackGround" loading="lazy">
         </div>
     </section>
     <!-- End of Adv -->
     <!-- Start of Adv Text -->
     <section class="adv-text">
         <div class="container">
-            <div class="left-side">
+            <div class="left-side upFade">
                 <h4>Why Choose Us</h4>
                 <h2>Best valued deals you will ever find</h2>
                 <p>Discover the best deals you'll ever find with our unbeatable offers.
@@ -282,12 +283,13 @@
                     Our deals are designed to give you the ultimate renting experience. so don't miss out on your chance
                     to save big
                 </p>
-                <a href="" class="main-page main-color-button find-details">Find Details <span
+                <a href="https://en.wikipedia.org/wiki/Detail" target="_blank"
+                    class="main-page main-color-button find-details">Find Details <span
                         class="material-symbols-outlined">
                         chevron_right
                     </span></a>
             </div>
-            <div class="right-side">
+            <div class="right-side downFade">
                 <div class="box">
                     <div class="icon">
                         <span class="material-symbols-outlined">
@@ -329,7 +331,7 @@
     </section>
     <!-- End of Adv Text -->
     <!-- Start of Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials zoomOut">
         <div class="container">
             <div class="title-text">
                 <h3>Reviewed by people</h3>
@@ -345,7 +347,7 @@
                         easy and the rental rates were very affordable. "</div>
                     <div class="testimonial">
                         <div class="user">
-                            <img src="/Images/user-1.jpg" alt="User One Image">
+                            <img src="/Images/user-1.jpg" alt="User One Image" loading="lazy">
                             <div class="user-text">
                                 <div class="name">Parry Hotter</div>
                                 <p>New Cairo</p>
@@ -360,7 +362,7 @@
                     </div>
                     <div class="testimonial">
                         <div class="user">
-                            <img src="/Images/user-2.jpg" alt="User Two Image">
+                            <img src="/Images/user-2.jpg" alt="User Two Image" loading="lazy">
                             <div class="user-text">
                                 <div class="name">Ron Rizzly</div>
                                 <p>The 5th Settlement</p>
@@ -374,7 +376,7 @@
     </section>
     <!-- End of Testimonials -->
     <!-- Start of FAQ -->
-    <section class="faq" id="faq">
+    <section class="faq rightFade" id="faq">
         <div class="container">
             <div class="title-text">
                 <h3>FAQ</h3>
@@ -428,11 +430,11 @@
                 </div>
             </div>
         </div>
-        <img class="range-rover" src="Images/FAQ.jfif" alt="">
+        <img class="range-rover" src="Images/FAQ.jfif" alt="Range Rover Car" loading="lazy">
     </section>
     <!-- End of FAQ -->
     <!-- Start of Download Our App -->
-    <section class="download-our-app">
+    <section class="download-our-app leftFade">
         <div class="container">
             <div class="left-side">
                 <h2>Download our app To get most out of it</h2>
@@ -440,18 +442,20 @@
                     officia numquam necessitatibus modi saepe excepturi nesciunt est fuga nisi repellat dolorum quam,
                     libero officiis nulla.</p>
                 <div class="download-links">
-                    <a href="#"><img src="/Images/google play.png" alt="Google Play Logo"></a>
-                    <a href="#"><img src="/Images/Apple store.jpg" alt="Apple Store Logo"></a>
+                    <a href="https://play.google.com/store/games" target="_blank"><img src="/Images/google play.png"
+                            alt="Google Play Logo" loading="lazy"></a>
+                    <a href="https://www.apple.com/eg/app-store/" target="_blank"><img src="/Images/Apple store.jpg"
+                            alt="Apple Store Logo" loading="lazy"></a>
                 </div>
             </div>
             <div class="right-side">
-                <img src="/Images/download-ad.png" alt="Phone Screen With a Text on it">
+                <img src="/Images/download-ad.png" alt="Phone Screen With a Text on it" loading="lazy">
             </div>
         </div>
     </section>
     <!-- End of Download Our App -->
     <!-- Start of Footer -->
-    <footer>
+    <footer class="zoomIn">
         <div class="container">
             <div class="content rental">
                 <h3>CAR <span> Rental</span></h3>
@@ -470,14 +474,13 @@
             </div>
             <div class="content company">
                 <h3>COMPANY</h3>
-                <a
-                    href="https://www.google.com/maps/place/%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9+%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC%E2%80%AD/data=!4m2!3m1!1s0x145822cffcd270e7:0x98b73d687889fd8?sa=X&ved=2ahUKEwj878y73aaEAxWVTaQEHQs6BjwQ8gF6BAgPEAA">New
+                <a href="https://www.google.com/maps/place/%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9+%D8%A7%D9%84%D8%AC%D8%AF%D9%8A%D8%AF%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC%E2%80%AD/data=!4m2!3m1!1s0x145822cffcd270e7:0x98b73d687889fd8?sa=X&ved=2ahUKEwj878y73aaEAxWVTaQEHQs6BjwQ8gF6BAgPEAA"
+                    target="_blank">New
                     Cairo
                 </a>
-                <a href="#">Careers</a>
-                <a href="#">Mobile</a>
-                <a href="#">Blog</a>
-                <a href="#">How we work</a>
+                <a href="https://en.wikipedia.org/wiki/Career" target="_blank">Careers</a>
+                <a href="https://en.wikipedia.org/wiki/Mobile" target="_blank">Mobile</a>
+                <a href="https://en.wikipedia.org/wiki/Blog" target="_blank">Blog</a>
             </div>
             <div class="content working">
                 <h3>WORKING HOURS</h3>
@@ -497,7 +500,8 @@
     </footer>
     <!-- End of Footer -->
     <button onclick="topFunction()" id="myBtn" title="Go to top" class="back-to-top">
-        <img src="/Images/back-to-top.png" alt=""></button>
+        <img src="/Images/back-to-top.png" alt="Car Shaped Button To Go Back To Top Of the Page" loading="eager">
+    </button>
     <script src="index.js"></script>
 </body>
 

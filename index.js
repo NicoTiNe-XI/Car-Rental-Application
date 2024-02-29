@@ -1,4 +1,28 @@
 // ALL THE PAGES 
+// Animation On Scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+        } else {
+            entry.target.classList.remove("show")
+        }
+    })
+})
+
+const zoomOut = document.querySelectorAll(".zoomOut");
+const zoomIn = document.querySelectorAll(".zoomIn");
+const rightFade = document.querySelectorAll(".rightFade");
+const leftFade = document.querySelectorAll(".leftFade");
+const upFade = document.querySelectorAll(".upFade");
+const downFade = document.querySelectorAll(".downFade");
+const animation = [zoomOut, zoomIn, rightFade, leftFade, upFade, downFade]
+animation.forEach(anima => {
+    anima.forEach(e => {
+        observer.observe(e);
+    })
+})
+
 // Go To Home Btn
 document.getElementById("logo").addEventListener("click", function () {
     window.location.href = "home.html";
@@ -6,12 +30,12 @@ document.getElementById("logo").addEventListener("click", function () {
 
 // Adding Active Class FOr The Current Page
 document.addEventListener('DOMContentLoaded', function () {
-    var currentPageUrl = window.location.href;
-    var currentPageName = currentPageUrl.substring(currentPageUrl.lastIndexOf('/') + 1);
-    var menuItems = document.querySelectorAll("header nav ul li a");
+    let currentPageUrl = window.location.href;
+    let currentPageName = currentPageUrl.substring(currentPageUrl.lastIndexOf('/') + 1);
+    let menuItems = document.querySelectorAll("header nav ul li a");
     menuItems.forEach(function (item) {
-        var href = item.getAttribute('href');
-        var pageName = href.substring(href.lastIndexOf('/') + 1);
+        let href = item.getAttribute('href');
+        let pageName = href.substring(href.lastIndexOf('/') + 1);
         if (pageName === currentPageName)
             item.classList.add('active');
     });
@@ -19,12 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Burger Menu Btn
 document.querySelector('.burger-menu').addEventListener('click', function () {
-    var navLinks = document.querySelector('.nav-links');
+    let navLinks = document.querySelector('.nav-links');
     navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    let burgerIcon = document.querySelector(".burger-icon");
+    burgerIcon.innerHTML = burgerIcon.innerHTML === "close" ? "menu" : "close";
 });
 
 // Back To Top Btn
-var backToTop = document.getElementById("myBtn");
+let backToTop = document.getElementById("myBtn");
 
 // Checks If The btn Is Needed To Be Shown
 window.onscroll = function () {
@@ -47,11 +73,11 @@ function topFunction() {
 }
 
 // Remove And Add  Placeholder On Focus And Blur In Every Page
-let emailInputs = document.querySelectorAll('input[type="email"]')
-let textInputs = document.querySelectorAll('input[type="text"]')
-let phoneNumberInputs = document.querySelectorAll('input[type="tel"]')
-let passwordInputs = document.querySelectorAll('input[type="password"]')
-let inputsArrays = [emailInputs, textInputs, phoneNumberInputs, passwordInputs];
+const emailInputs = document.querySelectorAll('input[type="email"]')
+const textInputs = document.querySelectorAll('input[type="text"]')
+const phoneNumberInputs = document.querySelectorAll('input[type="tel"]')
+const passwordInputs = document.querySelectorAll('input[type="password"]')
+const inputsArrays = [emailInputs, textInputs, phoneNumberInputs, passwordInputs];
 
 inputsArrays.forEach(inputs => {
     inputs.forEach(input => {
@@ -68,32 +94,56 @@ inputsArrays.forEach(inputs => {
 
 // HOME PAGE
 if (window.location.pathname === '/home.html') {
+    document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll('select, input[type="date"]');
+        inputs.forEach(input => {
+            input.addEventListener('change', function () {
+                if (this.value === '') {
+                    this.style.color = 'gray';
+                } else {
+                    this.style.color = 'black';
+                }
+            });
+            input.dispatchEvent(new Event('change'));
+        });
+    });
     // Add And Remove Active Class In Vehicle Models
-    let vehicleButtons = document.querySelectorAll("section.vehicle-models .container .content .left-side button");
+    const vehicleButtons = document.querySelectorAll("section.vehicle-models .container .content .left-side button");
     vehicleButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
             vehicleButtons.forEach(btn => {
                 btn.classList.remove("active");
             })
             e.currentTarget.classList.add("active");
-            let currentModelImage = document.getElementById("current-model");
+            const currentModelImage = document.getElementById("current-model");
             currentModelImage.setAttribute("src", `/Images/${(e.currentTarget).innerHTML}.jpg`);
-            let imageSrc = currentModelImage.getAttribute("src");
-            let carModel = imageSrc.substring(imageSrc.lastIndexOf("/") + 1).slice(0, -4);
-            currentModelImage.style.opacity = "1"
+            const imageSrc = currentModelImage.getAttribute("src");
+            const carModel = imageSrc.substring(imageSrc.lastIndexOf("/") + 1).slice(0, -4);
             vehicleDetails(carModel)
+            changeImageWithFade(`/Images/${(e.currentTarget).innerHTML}.jpg`);
         })
     })
+
+    function changeImageWithFade(newSrc) {
+        const currentModelImage = document.getElementById("current-model");
+        currentModelImage.style.opacity = "0";
+        currentModelImage.style.transform = "scale(0)";
+        setTimeout(() => {
+            currentModelImage.setAttribute("src", newSrc);
+            currentModelImage.style.opacity = "1";
+            currentModelImage.style.transform = "scale(1)";
+        }, 300);
+    }
 
     // Detailing Every Car
     function vehicleDetails(carModel) {
         // Declaring Variables
-        let pricing = document.querySelector(".price");
-        let vehicleModel = document.querySelector(".model");
-        let vehicleMark = document.querySelector(".mark");
-        let vehicleYear = document.querySelector(".year");
-        let vehicleTransmission = document.querySelector(".transmission");
-        let vehicleFuel = document.querySelector(".fuel");
+        const pricing = document.querySelector(".price");
+        const vehicleModel = document.querySelector(".model");
+        const vehicleMark = document.querySelector(".mark");
+        const vehicleYear = document.querySelector(".year");
+        const vehicleTransmission = document.querySelector(".transmission");
+        const vehicleFuel = document.querySelector(".fuel");
 
         // Condition Show Team Box Base On The Selected Category
         switch (carModel) {
@@ -138,7 +188,7 @@ if (window.location.pathname === '/home.html') {
                 vehicleFuel.textContent = "Diesel";
                 break;
             case "VW Passat CC":
-                pricing.textContent = "$25"
+                pricing.textContent = "$25 /"
                 vehicleModel.textContent = "Passat CC";
                 vehicleMark.textContent = "Volkswagen";
                 vehicleYear.textContent = "2008";
@@ -151,11 +201,11 @@ if (window.location.pathname === '/home.html') {
     }
 
     // Drop Down FAQ
-    let faqButton = document.querySelectorAll(".question");
+    const faqButton = document.querySelectorAll(".question");
     faqButton.forEach(btn => {
         btn.addEventListener("click", (e) => {
-            let expandMore = e.currentTarget.querySelector(".expand");
-            let faqQuestion = e.currentTarget.nextElementSibling;
+            const expandMore = e.currentTarget.querySelector(".expand");
+            const faqQuestion = e.currentTarget.nextElementSibling;
             faqQuestion.style.display = faqQuestion.style.display === 'block' ? 'none' : 'block';
             expandMore.textContent = expandMore.textContent === 'expand_less' ? 'expand_more' : 'expand_less';
         })
@@ -176,19 +226,37 @@ if (window.location.pathname === '/testimonials.html') {
 
     // Adding All The Testimonials Data From The JSON File To the Page
     function testimonialsData() {
+        const testimonialsContainer = document.getElementById("testimonials-container");
+        let testimonialHTML = '';
         jsonData.testimonials.forEach(testimonial => {
-            let testimonialStructure = `<div class="testimonials-user">
-        <div class="testimonials-user-info">
-        <div class="testimonials-user-info-image"><img src="${testimonial.avatar} alt="User Image""></div>
-        <div class="testimonials-user-info-text">
-        <span class="user-info-name">${testimonial.name}</span>
-        <span class="user-info-position">${testimonial.position}</span>
-        </div>
-        </div>
-        <div class="testimonials-user-message">${testimonial.message}</div>
-        </div>`;
-            let testimonialsContainer = document.getElementById("testimonials-container");
-            testimonialsContainer.innerHTML += testimonialStructure;
+            testimonialHTML += `
+            <div class="testimonials-user">
+                <div class="testimonials-user-info">
+                    <div class="testimonials-user-info-image"><img src="${testimonial.avatar}" alt="User Image"></div>
+                    <div class="testimonials-user-info-text">
+                        <span class="user-info-name">${testimonial.name}</span>
+                        <span class="user-info-position">${testimonial.position}</span>
+                    </div>
+                </div>
+                <div class="testimonials-user-message">${testimonial.message}</div>
+            </div>`;
+        });
+
+        // Append all testimonials HTML at once
+        testimonialsContainer.innerHTML = testimonialHTML;
+
+        // Add Intersection Observer to show testimonials when they come into view
+        const testimonials = document.querySelectorAll('.testimonials-user');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        testimonials.forEach(testimonial => {
+            observer.observe(testimonial);
         });
     }
 }
@@ -196,6 +264,7 @@ if (window.location.pathname === '/testimonials.html') {
 // OUR TEAM PAGE
 if (window.location.pathname === '/our-team.html') {
     // Fetching Data From JSON File To The Our Team Page
+    let jsonData;
     fetch('./element.json')
         .then(response => response.json())
         .then(data => {
@@ -207,57 +276,57 @@ if (window.location.pathname === '/our-team.html') {
     // Adding All The Our Team Data From The JSON File To the Page
     function ourTeamData() {
         jsonData.leadership.forEach(leader => {
-            let leadershipStructure = `<div class="box leadership all">
+            const leadershipStructure = `<div class="box leadership all">
         <img src="${leader.avatar} alt="User Image"">
         <span class="name">${leader.name}</span>
         <span class="position">${leader.position}</span>
         </div>`;
-            let ourTeamContainer = document.getElementById("our-team-content");
+            const ourTeamContainer = document.getElementById("our-team-content");
             ourTeamContainer.innerHTML += leadershipStructure;
         });
         jsonData.designers.forEach(designer => {
-            let designersStructure = `<div class="box designers all">
+            const designersStructure = `<div class="box designers all">
         <img src="${designer.avatar} alt="User Image"">
         <span class="name">${designer.name}</span>
         <span class="position">${designer.position}</span>
         </div>`;
-            let ourTeamContainer = document.getElementById("our-team-content");
+            const ourTeamContainer = document.getElementById("our-team-content");
             ourTeamContainer.innerHTML += designersStructure;
         });
         jsonData.developers.forEach(developer => {
-            let developersStructure = `<div class="box developers all">
+            const developersStructure = `<div class="box developers all">
         <img src="${developer.avatar} alt="User Image"">
         <span class="name">${developer.name}</span>
         <span class="position">${developer.position}</span>
         </div>`;
-            let ourTeamContainer = document.getElementById("our-team-content");
+            const ourTeamContainer = document.getElementById("our-team-content");
             ourTeamContainer.innerHTML += developersStructure;
         });
         jsonData.marketing.forEach(market => {
-            let marketingStructure = `<div class="box marketing all">
+            const marketingStructure = `<div class="box marketing all">
         <img src="${market.avatar} alt="User Image"">
         <span class="name">${market.name}</span>
         <span class="position">${market.position}</span>
         </div>`;
-            let ourTeamContainer = document.getElementById("our-team-content");
+            const ourTeamContainer = document.getElementById("our-team-content");
             ourTeamContainer.innerHTML += marketingStructure;
         });
         jsonData.products.forEach(product => {
-            let productStructure = `<div class="box product all">
+            const productStructure = `<div class="box product all">
         <img src="${product.avatar} alt="User Image"">
         <span class="name">${product.name}</span>
         <span class="position">${product.position}</span>
         </div>`;
-            let ourTeamContainer = document.getElementById("our-team-content");
+            const ourTeamContainer = document.getElementById("our-team-content");
             ourTeamContainer.innerHTML += productStructure;
         });
         jsonData.hr.forEach(hr => {
-            let humanResourcesStructure = `<div class="box hr all">
+            const humanResourcesStructure = `<div class="box hr all">
         <img src="${hr.avatar} alt="User Image"">
         <span class="name">${hr.name}</span>
         <span class="position">${hr.position}</span>
         </div>`;
-            let ourTeamContainer = document.getElementById("our-team-content");
+            const ourTeamContainer = document.getElementById("our-team-content");
             ourTeamContainer.innerHTML += humanResourcesStructure;
         });
     }
@@ -268,7 +337,7 @@ if (window.location.pathname === '/our-team.html') {
     });
 
     // Filtering Our Team Via Position
-    let ourTeamPositionBtn = document.querySelectorAll("ul li a");
+    const ourTeamPositionBtn = document.querySelectorAll("ul li a");
     ourTeamPositionBtn.forEach((btn) => {
         btn.addEventListener("click", (e) => {
             ourTeamPositionBtn.forEach((btn) => {
@@ -282,14 +351,14 @@ if (window.location.pathname === '/our-team.html') {
     // Function To Check For The Roles
     function checkingForRoles(position) {
         // Declaring Variables
-        let boxElement = document.querySelectorAll(".all")
-        let leadersShipTeam = document.querySelectorAll(".leadership");
-        let designersTeam = document.querySelectorAll(".designers");
-        let developersTeam = document.querySelectorAll(".developers");
-        let marketingTeam = document.querySelectorAll(".marketing");
-        let productTeam = document.querySelectorAll(".product");
-        let hrTeam = document.querySelectorAll(".hr");
-        let category = document.querySelector(".category")
+        const boxElement = document.querySelectorAll(".all")
+        const leadersShipTeam = document.querySelectorAll(".leadership");
+        const designersTeam = document.querySelectorAll(".designers");
+        const developersTeam = document.querySelectorAll(".developers");
+        const marketingTeam = document.querySelectorAll(".marketing");
+        const productTeam = document.querySelectorAll(".product");
+        const hrTeam = document.querySelectorAll(".hr");
+        const category = document.querySelector(".category")
 
         // Add Hidden Class For All Teams
         boxElement.forEach((box) => {
@@ -350,7 +419,8 @@ if (window.location.pathname === '/our-team.html') {
 if (window.location.pathname === '/sign-in.html') {
     document.getElementById("remove-image").addEventListener("click", () => {
         document.getElementById("sign-in-image").style.display = "none";
-        document.getElementById("log-in-form").style.boxShadow = "rgba(0, 0, 0, 0.2) -20px 18px 30px, rgba(0, 0, 0, 0.2) 20px -20px 30px"
+        document.getElementById("log-in-form").style.border = "1px solid rgba(0, 0, 0, 0.2)";
+        document.getElementById("log-in-form").style.borderRadius = "8px";
     })
     document.getElementById("sign-in-login-button").addEventListener("click", () => {
         document.getElementById("loader").style.display = "block";
@@ -359,18 +429,22 @@ if (window.location.pathname === '/sign-in.html') {
 
 // Registration Page
 if (window.location.pathname === '/register.html') {
+    // On Click Radio Name Radio Check
+    function triggerRadio(id) {
+        document.getElementById(id).checked = true;
+    }
     // Form Validation
     document.addEventListener('DOMContentLoaded', function () {
         // Setting Variables
-        let formFullName = document.querySelector("[name='full-name']");
-        let formUserName = document.querySelector("[name='username']");
-        let formEmail = document.querySelector("[name='email']");
-        let formPhoneNumber = document.querySelector("[name='phone-number']");
-        let formPassword = document.querySelector("[name='password']");
-        let formConfirmPassword = document.querySelector("[name='confirm-password']");
+        const formFullName = document.querySelector("[name='full-name']");
+        const formUserName = document.querySelector("[name='username']");
+        const formEmail = document.querySelector("[name='email']");
+        const formPhoneNumber = document.querySelector("[name='phone-number']");
+        const formPassword = document.querySelector("[name='password']");
+        const formConfirmPassword = document.querySelector("[name='confirm-password']");
         // Email Validation
-        let emailRe = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        let isValidEmail = () => {
+        const emailRe = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        const isValidEmail = () => {
             return emailRe.test(formEmail.value.toLowerCase());
         }
 
@@ -381,37 +455,41 @@ if (window.location.pathname === '/register.html') {
         }
 
         const setSuccess = element => {
-            let inputDisplay = element.parentElement;
-            let errorDisplay = inputDisplay.querySelector(".error");
+            const inputDisplay = element.parentElement;
+            const errorDisplay = inputDisplay.querySelector(".error");
             errorDisplay.innerHTML = "";
             inputDisplay.classList.add("valid");
             inputDisplay.classList.remove("not-valid");
         }
 
         const setError = (element, message) => {
-            let inputDisplay = element.parentElement;
-            let errorDisplay = inputDisplay.querySelector(".error");
+            const inputDisplay = element.parentElement;
+            const errorDisplay = inputDisplay.querySelector(".error");
             errorDisplay.innerHTML = message;
             inputDisplay.classList.add("not-valid");
             inputDisplay.classList.remove("valid");
         }
 
         function validateInputs() {
-            let formFullNameValue = formFullName.value.trim();
-            let formUserNameValue = formUserName.value.trim();
-            let formEmailValue = formEmail.value.trim();
-            let formPhoneNumberValue = formPhoneNumber.value.trim();
-            let formPasswordValue = formPassword.value.trim();
-            let formConfirmPasswordValue = formConfirmPassword.value.trim();
+            const formFullNameValue = formFullName.value;
+            const formUserNameValue = formUserName.value;
+            const formEmailValue = formEmail.value;
+            const formPhoneNumberValue = formPhoneNumber.value;
+            const formPasswordValue = formPassword.value;
+            const formConfirmPasswordValue = formConfirmPassword.value;
             // Full Name Validation
             if (formFullNameValue === "") {
                 setError(formFullName, "Full Name Is required");
+            } else if (!formFullNameValue.match(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/)) {
+                setError(formFullName, "Enter A Valid Full Name");
             } else {
                 setSuccess(formFullName);
             }
             // User Name Validation
             if (formUserNameValue === "") {
                 setError(formUserName, "User Name Is required");
+            } else if (!formUserNameValue.match(/^[a-zA-Z0-9_]+$/)) {
+                setError(formUserName, "Enter A Valid User Name");
             } else {
                 setSuccess(formUserName);
             }
@@ -426,8 +504,8 @@ if (window.location.pathname === '/register.html') {
             // Phone Number Validation
             if (formPhoneNumberValue === "") {
                 setError(formPhoneNumber, "Phone Number Is required");
-            } else if (!formConfirmPasswordValue.match(/^(\+?\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$/)) {
-                setError(formPhoneNumber, "Enter A Valid Phone Number");
+            } else if (!formPhoneNumberValue.match(/^(\+?\d{1,3})?[-. (]?\d{3}[-. )]?\d{3}[-. ]?\d{4}$/)) {
+                setError(formPhoneNumber, "Use This Phone Number Pattern +201234567890");
             } else {
                 setSuccess(formPhoneNumber);
             }
@@ -453,10 +531,6 @@ if (window.location.pathname === '/register.html') {
             } else {
                 setSuccess(formConfirmPassword);
             }
-        }
-        // On Click Radio Name Radio Check
-        function triggerRadio(id) {
-            document.getElementById(id).checked = true;
         }
     });
 }
