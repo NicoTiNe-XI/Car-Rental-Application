@@ -440,6 +440,21 @@ main .main-image {
 main .main-image img {
     width: 100%;
     height: auto;
+    animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 1200px) {
