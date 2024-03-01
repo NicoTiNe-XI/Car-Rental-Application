@@ -300,6 +300,7 @@ header .links ul li a {
     padding: 0 10px;
     transition: var(--main-transition);
     cursor: pointer;
+    font-weight: 900;
 }
 
 header nav ul li a:hover,
@@ -459,7 +460,7 @@ main .main-image img {
 
 @media (max-width: 1200px) {
     main .container {
-        min-height: 64vh;
+        min-height: 15vh;
     }
 }
 
@@ -535,10 +536,9 @@ section.booking .container form input {
     outline: none;
     font-weight: var(--main-font-weight);
     border-radius: var(--main-border-radius);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2.1px);
-    background: #d3d0d094;
-
+    background: #d3d0d012;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 section.booking .container form select option:disabled {
@@ -616,8 +616,8 @@ section.details .container .box-container .box {
     flex-direction: column;
     text-align: center;
     border-radius: var(--main-border-radius);
-    background: #d3d0d094;
     backdrop-filter: blur(2.1px);
+    background: #d3d0d012;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -841,10 +841,6 @@ section.big-heading h6 span {
 
 /* Start of Big Heading */
 /* Start of Adv */
-section.adv {
-    padding: 50px 0;
-}
-
 section.adv .container {
     display: flex;
     justify-content: center;
@@ -1262,8 +1258,8 @@ footer .container .content.subscribe form .enter-email {
     font-weight: var(--main-font-weight);
     color: gray;
     border-radius: var(--main-border-radius);
-    background: #d3d0d094;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background: #d3d0d012;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.1px);
 }
 
@@ -2048,6 +2044,60 @@ footer .container .content.subscribe .submit-email:hover {
 }
 
 /* Register HTML Page */
+/* Forgot Your Password HTML Page */
+main.forgot-password {
+    padding: 110px 0;
+}
+
+main.forgot-password .container {
+    flex-direction: column;
+    gap: 30px;
+}
+
+main.forgot-password .container .logo {
+    display: flex;
+}
+
+main.forgot-password .container .logo img {
+    width: 70px;
+    height: auto;
+}
+
+main.forgot-password .container .logo-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+main.forgot-password .container .logo-text .bold-text {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+main.forgot-password .container .logo-text .small-text {
+    font-size: 17px;
+}
+
+main.forgot-password .container .title {
+    text-align: center;
+}
+
+main.forgot-password .container .title p {
+    max-width: 677px;
+    padding-bottom: 40px;
+}
+
+main.forgot-password .container .title a {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 10px 25px;
+    font-size: 20px;
+    border-radius: 40px;
+    font-weight: 900;
+}
+
+/* Forgot Your Password HTML Page */
 /* Loader */
 .loader {
     width: 48px;

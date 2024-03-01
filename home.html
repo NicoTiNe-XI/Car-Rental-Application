@@ -75,7 +75,7 @@
                         Ride<span class="material-symbols-outlined">
                             check_circle
                         </span></a>
-                    <a href="#faq" class="secondary-color-button main-page">Learn More <span
+                    <a href="/about.html" class="secondary-color-button main-page">Learn More <span
                             class="material-symbols-outlined">
                             chevron_right
                         </span></a>
@@ -88,7 +88,7 @@
     </main>
     <!-- End of Main -->
     <!-- Start of Booking -->
-    <section class="booking zoomIn" id="book">
+    <section class="booking" id="book">
         <div class="container">
             <div class="title-text">
                 <h3>Book A Car</h3>
@@ -491,8 +491,9 @@
             <div class="content subscribe">
                 <h3>SUBSCRIPTION</h3>
                 <p>Subscribe your Email Address for latest news & updates</p>
-                <form action="/submit-form" method="post">
+                <form action="/submit-form" method="post" id="footer-form">
                     <input type="email" class="enter-email" id="enter-email" placeholder="Enter Email Address">
+                    <div class="error"></div>
                     <input type="submit" id="submit-email" class="submit-email">
                 </form>
             </div>

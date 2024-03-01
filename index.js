@@ -1,27 +1,29 @@
 // ALL THE PAGES 
 // Animation On Scroll
-const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show")
-        } else {
-            entry.target.classList.remove("show")
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show")
+            } else {
+                entry.target.classList.remove("show")
+            }
+        })
     })
-})
 
-const zoomOut = document.querySelectorAll(".zoomOut");
-const zoomIn = document.querySelectorAll(".zoomIn");
-const rightFade = document.querySelectorAll(".rightFade");
-const leftFade = document.querySelectorAll(".leftFade");
-const upFade = document.querySelectorAll(".upFade");
-const downFade = document.querySelectorAll(".downFade");
-const animation = [zoomOut, zoomIn, rightFade, leftFade, upFade, downFade]
-animation.forEach(anima => {
-    anima.forEach(e => {
-        observer.observe(e);
+    const zoomOut = document.querySelectorAll(".zoomOut");
+    const zoomIn = document.querySelectorAll(".zoomIn");
+    const rightFade = document.querySelectorAll(".rightFade");
+    const leftFade = document.querySelectorAll(".leftFade");
+    const upFade = document.querySelectorAll(".upFade");
+    const downFade = document.querySelectorAll(".downFade");
+    const animation = [zoomOut, zoomIn, rightFade, leftFade, upFade, downFade]
+    animation.forEach(anima => {
+        anima.forEach(e => {
+            observer.observe(e);
+        })
     })
-})
+});
 
 // Go To Home Btn
 document.getElementById("logo").addEventListener("click", function () {
@@ -200,6 +202,11 @@ if (window.location.pathname === '/home.html') {
         }
     }
 
+    // Footer Form preventDefault
+    document.getElementById("footer-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+    })
+
     // Drop Down FAQ
     const faqButton = document.querySelectorAll(".question");
     faqButton.forEach(btn => {
@@ -209,6 +216,14 @@ if (window.location.pathname === '/home.html') {
             faqQuestion.style.display = faqQuestion.style.display === 'block' ? 'none' : 'block';
             expandMore.textContent = expandMore.textContent === 'expand_less' ? 'expand_more' : 'expand_less';
         })
+    })
+}
+
+// ABOUT PAGE
+if (window.location.pathname === '/about.html') {
+    // Footer Form preventDefault
+    document.getElementById("footer-form").addEventListener("submit", (e) => {
+        e.preventDefault();
     })
 }
 
@@ -425,6 +440,9 @@ if (window.location.pathname === '/sign-in.html') {
     document.getElementById("sign-in-login-button").addEventListener("click", () => {
         document.getElementById("loader").style.display = "block";
     })
+    document.getElementById("sign-in-form").addEventListener("submit", (e) => {
+        e.preventDefault()
+    })
 }
 
 // Registration Page
@@ -496,7 +514,7 @@ if (window.location.pathname === '/register.html') {
             // Email Validation
             if (formEmailValue === "") {
                 setError(formEmail, "Email Is required");
-            } else if (!isValidEmail()) {
+            } else if (!formEmailValue.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
                 setError(formEmail, "Enter A valid Email");
             } else {
                 setSuccess(formEmail);
