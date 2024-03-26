@@ -441,7 +441,7 @@ main .main-image {
 main .main-image img {
     width: 100%;
     height: auto;
-    animation: floating 4s ease-in-out infinite;
+    animation: floating 6s ease-in-out infinite;
 }
 
 @keyframes floating {
